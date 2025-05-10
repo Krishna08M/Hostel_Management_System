@@ -1,0 +1,8 @@
+<form method="post">
+    {% csrf_token %}
+    <label>Room Number:</label><br>
+    <input type="text" name="room_number"><br>
+    <label>Capacity:</label><br>
+    <input type="number" name="capacity"><br>
+    <button type="submit">Create Room</button>
+</form>

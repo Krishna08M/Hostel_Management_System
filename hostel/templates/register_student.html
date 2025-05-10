@@ -1,0 +1,14 @@
+<form method="post">
+    {% csrf_token %}
+    <label>Name:</label><br>
+    <input type="text" name="name"><br>
+    <label>Roll Number:</label><br>
+    <input type="text" name="roll_number"><br>
+    <label>Room:</label><br>
+    <select name="room">
+        {% for room in rooms %}
+            <option value="{{ room.id }}">{{ room.room_number }}</option>
+        {% endfor %}
+    </select><br>
+    <button type="submit">Register Student</button>
+</form>
